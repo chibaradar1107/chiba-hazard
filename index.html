@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>千葉ハザードマップ 危険度スコア</title>
+  <meta name="description" content="千葉県の住所を入力するだけで、洪水・津波・土砂災害・高潮・液状化の危険度を100点満点で評価。国土交通省の公式ハザードマップデータを活用。">
+
+  <!-- Leaflet.js -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- App Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== ヘッダー ===== -->
+  <header class="app-header">
+    <h1>千葉ハザードマップ 危険度スコア</h1>
+    <p class="subtitle">住所を入力 → 5項目のリスクを分析 → 安全スコア100点満点で表示</p>
+  </header>
+
+  <!-- ===== メインコンテンツ ===== -->
+  <main class="main-container">
+
+    <!-- 検索 -->
+    <section class="search-section">
+      <h2>住所を入力してください</h2>
+      <form id="searchForm" class="search-form">
+        <input
+          type="text"
+          id="addressInput"
+          class="search-input"
+          placeholder="例: 千葉県千葉市美浜区中瀬1丁目"
+          autocomplete="off"
+        >
+        <button type="submit" class="search-btn" id="searchBtn">分析する</button>
+      </form>
+      <div class="search-hint">
+        試してみる:
+        <span class="hint-address">千葉県千葉市美浜区中瀬1丁目</span>
+        <span class="hint-address">千葉県浦安市舞浜1</span>
+        <span class="hint-address">千葉県柏市柏1丁目</span>
+        <span class="hint-address">千葉県銚子市犬吠埼</span>
+      </div>
+      <div id="errorMessage" class="error-message"></div>
+    </section>
+
+    <!-- 結果セクション -->
+    <div id="resultsSection" class="results-section">
+
+      <!-- スコアカード -->
+      <section id="scoreCard" class="score-card">
+        <div id="scoreMunicipality" class="score-municipality"></div>
+        <div id="scoreAddress" class="score-address"></div>
+
+        <div class="score-circle-wrapper">
+          <svg class="score-circle" viewBox="0 0 200 200">
+            <circle class="score-circle-bg" cx="100" cy="100" r="90" />
+            <circle id="scoreCircleFill" class="score-circle-fill" cx="100" cy="100" r="90" />
+          </svg>
+          <div class="score-number">
+            <span id="scoreValue" class="value">0</span>
+            <span class="unit">/ 100 点</span>
+          </div>
+        </div>
+
+        <div id="scoreGrade" class="score-grade"></div>
+        <div id="scoreDescription" class="score-description"></div>
+      </section>
+
+      <!-- 内訳 -->
+      <section class="breakdown-section">
+        <h3>項目別スコア</h3>
+        <div id="breakdownGrid" class="breakdown-grid"></div>
+      </section>
+
+      <!-- 地図 -->
+      <section class="map-section">
+        <h3>ハザードマップ表示</h3>
+        <div class="map-controls">
+          <button class="layer-btn" data-layer="flood">🌊 洪水</button>
+          <button class="layer-btn" data-layer="tsunami">🏖️ 津波</button>
+          <button class="layer-btn" data-layer="landslide">⛰️ 土砂災害</button>
+          <button class="layer-btn" data-layer="storm">🌀 高潮</button>
+        </div>
+        <div id="map"></div>
+      </section>
+
+      <!-- 公式リンク -->
+      <section class="official-link-section">
+        <div id="officialLink"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ===== ローディング ===== -->
+  <div id="loadingOverlay" class="loading-overlay">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">住所を分析中...</div>
+  </div>
+
+  <!-- ===== フッター ===== -->
+  <footer class="app-footer">
+    <p>出典: <a href="https://disaportal.gsi.go.jp/" target="_blank">国土交通省 ハザードマップポータルサイト</a> ／ <a href="https://maps.gsi.go.jp/" target="_blank">国土地理院</a></p>
+    <p style="margin-top: 6px;">※ このスコアは公式データを基にした参考値です。正確な情報は各市町村の公式ハザードマップをご確認ください。</p>
+  </footer>
+
+  <!-- ===== Scripts ===== -->
+  <script src="hazard-data.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
