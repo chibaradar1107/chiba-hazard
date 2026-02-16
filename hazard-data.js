@@ -21,243 +21,243 @@ const CHIBA_HAZARD_DATA = {
   // ===== 千葉市 =====
   '千葉市中央区': {
     flood: 3, tsunami: 2, landslide: 1, storm: 3, liquefaction: 4,
-    officialUrl: 'https://www.city.chiba.jp/somu/kikikanri/hazardmap.html'
+    officialUrl: 'https://www.city.chiba.jp/sogoseisaku/kikikanri/bosai/2019jisinfusuigaihazardmap.html'
   },
   '千葉市花見川区': {
     flood: 3, tsunami: 1, landslide: 1, storm: 2, liquefaction: 3,
-    officialUrl: 'https://www.city.chiba.jp/somu/kikikanri/hazardmap.html'
+    officialUrl: 'https://www.city.chiba.jp/sogoseisaku/kikikanri/bosai/2019jisinfusuigaihazardmap.html'
   },
   '千葉市稲毛区': {
     flood: 2, tsunami: 1, landslide: 1, storm: 1, liquefaction: 3,
-    officialUrl: 'https://www.city.chiba.jp/somu/kikikanri/hazardmap.html'
+    officialUrl: 'https://www.city.chiba.jp/sogoseisaku/kikikanri/bosai/2019jisinfusuigaihazardmap.html'
   },
   '千葉市若葉区': {
     flood: 2, tsunami: 0, landslide: 2, storm: 0, liquefaction: 2,
-    officialUrl: 'https://www.city.chiba.jp/somu/kikikanri/hazardmap.html'
+    officialUrl: 'https://www.city.chiba.jp/sogoseisaku/kikikanri/bosai/2019jisinfusuigaihazardmap.html'
   },
   '千葉市緑区': {
     flood: 2, tsunami: 0, landslide: 2, storm: 0, liquefaction: 2,
-    officialUrl: 'https://www.city.chiba.jp/somu/kikikanri/hazardmap.html'
+    officialUrl: 'https://www.city.chiba.jp/sogoseisaku/kikikanri/bosai/2019jisinfusuigaihazardmap.html'
   },
   '千葉市美浜区': {
     flood: 2, tsunami: 3, landslide: 0, storm: 4, liquefaction: 5,
-    officialUrl: 'https://www.city.chiba.jp/somu/kikikanri/hazardmap.html'
+    officialUrl: 'https://www.city.chiba.jp/sogoseisaku/kikikanri/bosai/2019jisinfusuigaihazardmap.html'
   },
 
   // ===== 主要市 =====
   '銚子市': {
     flood: 2, tsunami: 4, landslide: 3, storm: 3, liquefaction: 3,
-    officialUrl: 'https://www.city.choshi.chiba.jp/simin/bousai/hazardmap.html'
+    officialUrl: 'https://www.city.choshi.chiba.jp/kurashi/page040050.html'
   },
   '市川市': {
     flood: 4, tsunami: 2, landslide: 1, storm: 3, liquefaction: 4,
-    officialUrl: 'https://www.city.ichikawa.lg.jp/catpage/cat_00000023.html'
+    officialUrl: 'https://www.city.ichikawa.lg.jp/gen06/1511000002.html'
   },
   '船橋市': {
     flood: 3, tsunami: 2, landslide: 1, storm: 3, liquefaction: 4,
-    officialUrl: 'https://www.city.funabashi.lg.jp/bousai/hazardmap/index.html'
+    officialUrl: 'https://www.city.funabashi.lg.jp/bousai/map/p009037.html'
   },
   '館山市': {
     flood: 2, tsunami: 4, landslide: 3, storm: 3, liquefaction: 2,
-    officialUrl: 'https://www.city.tateyama.chiba.jp/bousai/page100034.html'
+    officialUrl: 'https://www.city.tateyama.chiba.jp/anzen/hazardmap/index.html'
   },
   '木更津市': {
     flood: 3, tsunami: 3, landslide: 2, storm: 3, liquefaction: 4,
-    officialUrl: 'https://www.city.kisarazu.lg.jp/kurashi/bosai/bosai/index.html'
+    officialUrl: 'https://www.city.kisarazu.lg.jp/kurashi/bosai/hinanjo_bosaimap/bosaimap/9297.html'
   },
   '松戸市': {
     flood: 4, tsunami: 0, landslide: 1, storm: 0, liquefaction: 3,
-    officialUrl: 'https://www.city.matsudo.chiba.jp/kurashi/anzen_anshin/bousaitaisaku/hazardmap.html'
+    officialUrl: 'https://www.city.matsudo.chiba.jp/kurashi/anzen_anshin/sonae/bousai_taisaku/20183.html'
   },
   '野田市': {
     flood: 4, tsunami: 0, landslide: 1, storm: 0, liquefaction: 3,
-    officialUrl: 'https://www.city.noda.chiba.jp/kurashi/bousai/bousai/index.html'
+    officialUrl: 'https://www.city.noda.chiba.jp/kurashi/anzen/bousai/1009077/1009078.html'
   },
   '茂原市': {
     flood: 4, tsunami: 1, landslide: 2, storm: 1, liquefaction: 3,
-    officialUrl: 'https://www.city.mobara.chiba.jp/category/8-1-0-0.html'
+    officialUrl: 'https://www.city.mobara.chiba.jp/0000005890.html'
   },
   '成田市': {
     flood: 3, tsunami: 0, landslide: 2, storm: 0, liquefaction: 2,
-    officialUrl: 'https://www.city.narita.chiba.jp/safety/page0140_00001.html'
+    officialUrl: 'https://www.city.narita.chiba.jp/anshin/page073300.html'
   },
   '佐倉市': {
     flood: 3, tsunami: 0, landslide: 2, storm: 0, liquefaction: 2,
-    officialUrl: 'https://www.city.sakura.lg.jp/soshiki/kikikanri/bosai/hazardmap.html'
+    officialUrl: 'https://www.city.sakura.lg.jp/soshiki/kikikanrika/112/hazardmap/5703.html'
   },
   '東金市': {
     flood: 3, tsunami: 1, landslide: 2, storm: 1, liquefaction: 3,
-    officialUrl: 'https://www.city.togane.chiba.jp/category/6-1-0-0.html'
+    officialUrl: 'https://www.city.togane.chiba.jp/0000013179.html'
   },
   '旭市': {
     flood: 3, tsunami: 4, landslide: 2, storm: 3, liquefaction: 3,
-    officialUrl: 'https://www.city.asahi.lg.jp/soshiki/3/bosai.html'
+    officialUrl: 'https://www.city.asahi.lg.jp/site/hazard-map/#5kouzui'
   },
   '習志野市': {
     flood: 3, tsunami: 2, landslide: 0, storm: 3, liquefaction: 5,
-    officialUrl: 'https://www.city.narashino.lg.jp/bosai/bosai/hazardmap/index.html'
+    officialUrl: 'https://www.city.narashino.lg.jp/kurashi/bosaibohan/hazard_map/narashino_city_cc0501.html'
   },
   '柏市': {
     flood: 3, tsunami: 0, landslide: 1, storm: 0, liquefaction: 2,
-    officialUrl: 'https://www.city.kashiwa.lg.jp/bosai/bosai/hazardmap/index.html'
+    officialUrl: 'https://www.city.kashiwa.lg.jp/bosaianzen/anshinanzen/disaster/disaster_ready/bosaimap/hazardmap.html'
   },
   '勝浦市': {
     flood: 2, tsunami: 4, landslide: 3, storm: 2, liquefaction: 2,
-    officialUrl: 'https://www.city.katsuura.lg.jp/category/9-1-0-0.html'
+    officialUrl: 'https://www.city.katsuura.lg.jp/site/bousai/1592.html'
   },
   '市原市': {
     flood: 3, tsunami: 2, landslide: 2, storm: 2, liquefaction: 3,
-    officialUrl: 'https://www.city.ichihara.chiba.jp/kurashi/bousai/bousai/hazardmap.html'
+    officialUrl: 'https://www.city.ichihara.chiba.jp/article?articleId=62cf5a34958ba07588af5e58'
   },
   '流山市': {
     flood: 4, tsunami: 0, landslide: 1, storm: 0, liquefaction: 3,
-    officialUrl: 'https://www.city.nagareyama.chiba.jp/life/1001515/index.html'
+    officialUrl: 'https://www.city.nagareyama.chiba.jp/life/1003604/1003691/1003692/1003697.html'
   },
   '八千代市': {
     flood: 3, tsunami: 0, landslide: 1, storm: 0, liquefaction: 2,
-    officialUrl: 'https://www.city.yachiyo.lg.jp/soshiki/10/bosai-hazardmap.html'
+    officialUrl: 'https://www.city.yachiyo.lg.jp/soshiki/11/2171.html'
   },
   '我孫子市': {
     flood: 4, tsunami: 0, landslide: 1, storm: 0, liquefaction: 3,
-    officialUrl: 'https://www.city.abiko.chiba.jp/anshin/bousai/hazard/index.html'
+    officialUrl: 'https://www.city.abiko.chiba.jp/anshin/bousai/bousai_info/abikohazard_map.html'
   },
   '鴨川市': {
     flood: 2, tsunami: 4, landslide: 3, storm: 2, liquefaction: 2,
-    officialUrl: 'https://www.city.kamogawa.lg.jp/category/7-1-0-0.html'
+    officialUrl: 'https://www.city.kamogawa.lg.jp/site/bousai/265.html'
   },
   '鎌ケ谷市': {
     flood: 2, tsunami: 0, landslide: 1, storm: 0, liquefaction: 2,
-    officialUrl: 'https://www.city.kamagaya.chiba.jp/kurashi/anzen/bousai/hazardmap/index.html'
+    officialUrl: 'https://www.city.kamagaya.chiba.jp/anzen_anshin/bousai/haza-domappukankei/guidmap.html'
   },
   '君津市': {
     flood: 3, tsunami: 2, landslide: 3, storm: 2, liquefaction: 2,
-    officialUrl: 'https://www.city.kimitsu.lg.jp/soshiki/5/bousai-hazardmap.html'
+    officialUrl: 'https://www.city.kimitsu.lg.jp/soshiki/29/41675.html'
   },
   '富津市': {
     flood: 2, tsunami: 3, landslide: 3, storm: 3, liquefaction: 3,
-    officialUrl: 'https://www.city.futtsu.lg.jp/category/7-0-0-0.html'
+    officialUrl: 'https://www.city.futtsu.lg.jp/0000006977.html'
   },
   '浦安市': {
     flood: 2, tsunami: 2, landslide: 0, storm: 3, liquefaction: 5,
-    officialUrl: 'https://www.city.urayasu.lg.jp/todokede/anzen/bousai/hazardmap/index.html'
+    officialUrl: 'https://www.city.urayasu.lg.jp/todokede/anzen/bousai/1030669/1002110.html'
   },
   '四街道市': {
     flood: 2, tsunami: 0, landslide: 1, storm: 0, liquefaction: 2,
-    officialUrl: 'https://www.city.yotsukaido.chiba.jp/kurashi/bousai/hazardmap.html'
+    officialUrl: 'https://www.city.yotsukaido.chiba.jp/kurashi/bohan/bosai/hazardmap/hzmap.html'
   },
   '袖ケ浦市': {
     flood: 2, tsunami: 2, landslide: 2, storm: 2, liquefaction: 3,
-    officialUrl: 'https://www.city.sodegaura.lg.jp/soshiki/bousai/bousai/hazardmap.html'
+    officialUrl: 'https://www.city.sodegaura.lg.jp/soshiki/bousai/hazardmap.html'
   },
   '八街市': {
     flood: 2, tsunami: 0, landslide: 1, storm: 0, liquefaction: 2,
-    officialUrl: 'https://www.city.yachimata.lg.jp/category/7-1-0-0.html'
+    officialUrl: 'https://www.city.yachimata.lg.jp/soshiki/8/24210.html'
   },
   '印西市': {
     flood: 3, tsunami: 0, landslide: 1, storm: 0, liquefaction: 2,
-    officialUrl: 'https://www.city.inzai.lg.jp/category/1-3-0-0.html'
+    officialUrl: 'https://www.city.inzai.lg.jp/bousaiportal/0000008837.html'
   },
   '白井市': {
     flood: 2, tsunami: 0, landslide: 1, storm: 0, liquefaction: 2,
-    officialUrl: 'https://www.city.shiroi.chiba.jp/kurashi/bousai/hazardmap/index.html'
+    officialUrl: 'https://www.city.shiroi.chiba.jp/kurashi/bosai/b05/1421600157233.html'
   },
   '富里市': {
     flood: 2, tsunami: 0, landslide: 1, storm: 0, liquefaction: 2,
-    officialUrl: 'https://www.city.tomisato.lg.jp/category/7-1-0-0.html'
+    officialUrl: 'https://www.city.tomisato.lg.jp/0000007583.html'
   },
   '南房総市': {
     flood: 2, tsunami: 4, landslide: 3, storm: 3, liquefaction: 2,
-    officialUrl: 'https://www.city.minamiboso.chiba.jp/category/7-1-0-0.html'
+    officialUrl: 'https://www.city.minamiboso.chiba.jp/hazardmap/index.html'
   },
   '匝瑳市': {
     flood: 3, tsunami: 3, landslide: 2, storm: 2, liquefaction: 3,
-    officialUrl: 'https://www.city.sosa.lg.jp/category/2-1-0-0.html'
+    officialUrl: 'https://www.city.sosa.lg.jp/page/page000410.html'
   },
   '香取市': {
     flood: 4, tsunami: 1, landslide: 2, storm: 1, liquefaction: 4,
-    officialUrl: 'https://www.city.katori.lg.jp/kurashi/bosai/bosai/hazardmap.html'
+    officialUrl: 'https://www.city.katori.lg.jp/living/anzen_anshin/sonaete/hazard-map.html'
   },
   '山武市': {
     flood: 3, tsunami: 3, landslide: 2, storm: 2, liquefaction: 3,
-    officialUrl: 'https://www.city.sammu.lg.jp/soshiki/8/bousai-hazardmap.html'
+    officialUrl: 'https://www.city.sammu.lg.jp/bousai-syobo/bousai/page006801.html'
   },
   'いすみ市': {
     flood: 3, tsunami: 3, landslide: 2, storm: 2, liquefaction: 2,
-    officialUrl: 'https://www.city.isumi.lg.jp/category/6-1-0-0.html'
+    officialUrl: 'https://www.city.isumi.lg.jp/gyosei/in_case/3682.html'
   },
   '大網白里市': {
     flood: 3, tsunami: 3, landslide: 1, storm: 2, liquefaction: 3,
-    officialUrl: 'https://www.city.oamishirasato.lg.jp/category/6-1-0-0.html'
+    officialUrl: 'https://www.city.oamishirasato.lg.jp/0000011942.html'
   },
 
   // ===== 郡部（町村） =====
   '酒々井町': {
     flood: 2, tsunami: 0, landslide: 1, storm: 0, liquefaction: 2,
-    officialUrl: 'https://www.town.shisui.chiba.jp/category/6-1-0-0.html'
+    officialUrl: 'https://www.town.shisui.chiba.jp/docs/2014021806778/'
   },
   '栄町': {
     flood: 4, tsunami: 0, landslide: 1, storm: 0, liquefaction: 3,
-    officialUrl: 'https://www.town.sakae.chiba.jp/category/6-1-0-0.html'
+    officialUrl: 'https://www.town.sakae.chiba.jp/bousai-saigai/page007986.html'
   },
   '神崎町': {
     flood: 3, tsunami: 0, landslide: 1, storm: 0, liquefaction: 3,
-    officialUrl: 'https://www.town.kozaki.chiba.jp/'
+    officialUrl: 'https://www.town.kozaki.chiba.jp/kurashi/living_bosai/bosai/map.html'
   },
   '多古町': {
     flood: 3, tsunami: 0, landslide: 2, storm: 0, liquefaction: 2,
-    officialUrl: 'https://www.town.tako.chiba.jp/'
+    officialUrl: 'https://www.town.tako.chiba.jp/docs/2017121503004/'
   },
   '東庄町': {
     flood: 3, tsunami: 2, landslide: 2, storm: 2, liquefaction: 3,
-    officialUrl: 'https://www.town.tohnosho.chiba.jp/'
+    officialUrl: 'https://www.town.tohnosho.chiba.jp/kurashi_tetsuzuki/anzen_anshin/bosai/1/1966.html'
   },
   '九十九里町': {
     flood: 3, tsunami: 4, landslide: 0, storm: 3, liquefaction: 4,
-    officialUrl: 'https://www.town.kujukuri.chiba.jp/'
+    officialUrl: 'https://www.hazard-map-kujukuri.jp/'
   },
   '芝山町': {
     flood: 2, tsunami: 0, landslide: 1, storm: 0, liquefaction: 2,
-    officialUrl: 'https://www.town.shibayama.lg.jp/'
+    officialUrl: 'https://www.town.shibayama.lg.jp/0000001251.html'
   },
   '横芝光町': {
     flood: 3, tsunami: 3, landslide: 1, storm: 2, liquefaction: 3,
-    officialUrl: 'https://www.town.yokoshibahikari.chiba.jp/'
+    officialUrl: 'https://www.town.yokoshibahikari.chiba.jp/soshiki/5/1040.html'
   },
   '一宮町': {
     flood: 2, tsunami: 3, landslide: 1, storm: 2, liquefaction: 2,
-    officialUrl: 'https://www.town.ichinomiya.chiba.jp/'
+    officialUrl: 'https://www.town.ichinomiya.chiba.jp/kinkyu/bohanbosai/508.html'
   },
   '睦沢町': {
     flood: 2, tsunami: 1, landslide: 2, storm: 1, liquefaction: 2,
-    officialUrl: 'https://www.town.mutsuzawa.chiba.jp/'
+    officialUrl: 'https://www.town.mutsuzawa.chiba.jp/kurashi/bousai/bousai.html'
   },
   '長生村': {
     flood: 2, tsunami: 3, landslide: 1, storm: 2, liquefaction: 3,
-    officialUrl: 'https://www.vill.chosei.chiba.jp/'
+    officialUrl: 'https://www.vill.chosei.chiba.jp/0000000359.html'
   },
   '白子町': {
     flood: 2, tsunami: 3, landslide: 0, storm: 2, liquefaction: 3,
-    officialUrl: 'https://www.town.shirako.lg.jp/'
+    officialUrl: 'https://www.town.shirako.lg.jp/0000004607.html'
   },
   '長柄町': {
     flood: 2, tsunami: 0, landslide: 2, storm: 0, liquefaction: 2,
-    officialUrl: 'https://www.town.nagara.chiba.jp/'
+    officialUrl: 'https://www.town.nagara.chiba.jp/soshiki/1/5890.html'
   },
   '長南町': {
     flood: 2, tsunami: 0, landslide: 2, storm: 0, liquefaction: 2,
-    officialUrl: 'https://www.town.chonan.chiba.jp/'
+    officialUrl: 'https://www.town.chonan.chiba.jp/kurashi/kinkyuu/145/'
   },
   '大多喜町': {
     flood: 2, tsunami: 0, landslide: 3, storm: 0, liquefaction: 1,
-    officialUrl: 'https://www.town.otaki.chiba.jp/'
+    officialUrl: 'https://www.town.otaki.chiba.jp/kurashi/anshin/1/990.html'
   },
   '御宿町': {
     flood: 2, tsunami: 4, landslide: 2, storm: 2, liquefaction: 2,
-    officialUrl: 'https://www.town.onjuku.chiba.jp/'
+    officialUrl: 'https://www.town.onjuku.chiba.jp/soumuka/newbousai/index.html'
   },
   '鋸南町': {
     flood: 2, tsunami: 4, landslide: 3, storm: 3, liquefaction: 2,
-    officialUrl: 'https://www.town.kyonan.chiba.jp/'
+    officialUrl: 'https://www.town.kyonan.chiba.jp/site/bousai/7525.html'
   },
 };
 
