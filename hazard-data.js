@@ -323,10 +323,10 @@ function getRiskLabel(level) {
  * 総合スコアに対する評価ラベルを返す
  */
 function getScoreGrade(score) {
-  if (score >= 90) return { grade: '非常に安全', color: '#00e676', emoji: '🟢' };
-  if (score >= 75) return { grade: '安全', color: '#69f0ae', emoji: '🟢' };
-  if (score >= 60) return { grade: 'おおむね安全', color: '#ffeb3b', emoji: '🟡' };
-  if (score >= 45) return { grade: '注意が必要', color: '#ffa726', emoji: '🟠' };
-  if (score >= 30) return { grade: 'リスクあり', color: '#ff5722', emoji: '🔴' };
-  return { grade: '高リスク', color: '#d50000', emoji: '🔴' };
+  if (score >= 90) return { grade: '非常に安全', color: '#2f8a63', emoji: '🟢' };
+  if (score >= 75) return { grade: '安全', color: '#3f7f5b', emoji: '🟢' };
+  if (score >= 60) return { grade: 'おおむね安全', color: '#c79a20', emoji: '🟡' };
+  if (score >= 45) return { grade: '注意が必要', color: '#b9773f', emoji: '🟠' };
+  if (score >= 30) return { grade: 'リスクあり', color: '#c25145', emoji: '🔴' };
+  return { grade: '高リスク', color: '#9f2f2f', emoji: '🔴' };
 }

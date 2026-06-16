@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>千葉ハザードマップ 危険度スコア</title>
-  <meta name="description" content="千葉県の住所を入力するだけで、洪水・津波・土砂災害・高潮・液状化の危険度を100点満点で評価。国土交通省の公式ハザードマップデータを活用。">
+  <title>千葉レーダー 災害リスクスキャン</title>
+  <meta name="description" content="千葉県の住所を入力して、洪水・津波・土砂災害・高潮・液状化の参考リスクと公式ハザードマップを確認できます。">
 
   <!-- Leaflet.js -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -16,39 +16,74 @@
 <body>
 
   <!-- ===== ヘッダー ===== -->
-  <header class="app-header">
-    <h1>千葉ハザードマップ 危険度スコア</h1>
-    <p class="subtitle">住所を入力 → 5項目のリスクを分析 → 安全スコア100点満点で表示</p>
+  <header class="site-header">
+    <a href="#top" class="brand-mark" aria-label="千葉レーダー 災害リスクスキャン">
+      <img class="brand-logo-img" src="assets/chiba-radar-logo.jpg" alt="" aria-hidden="true">
+      <span>
+        <span class="brand-name">千葉レーダー</span>
+        <span class="brand-sub">CHIBA HAZARD SCAN</span>
+      </span>
+    </a>
+    <a class="header-action" href="#search">診断する</a>
   </header>
 
   <!-- ===== メインコンテンツ ===== -->
-  <main class="main-container">
+  <main id="top" class="main-container">
 
     <!-- 検索 -->
-    <section class="search-section">
-      <h2>住所を入力してください</h2>
-      <form id="searchForm" class="search-form">
-        <input
-          type="text"
-          id="addressInput"
-          class="search-input"
-          placeholder="例: 千葉県千葉市美浜区中瀬1丁目"
-          autocomplete="off"
-        >
-        <button type="submit" class="search-btn" id="searchBtn">分析する</button>
-      </form>
-      <div class="search-hint">
-        試してみる:
-        <span class="hint-address">千葉県千葉市美浜区中瀬1丁目</span>
-        <span class="hint-address">千葉県浦安市舞浜1</span>
-        <span class="hint-address">千葉県柏市柏1丁目</span>
-        <span class="hint-address">千葉県銚子市犬吠埼</span>
+    <section id="search" class="hero-section">
+      <div class="hero-copy">
+        <p class="kicker">千葉 · 災害リスクレーダー</p>
+        <h1>
+          <span>住所から、</span>
+          <span>土地のリスクを</span>
+          <span>ひと目で。</span>
+        </h1>
+        <p class="lead">住まい探しや現地確認の前に、災害リスクの見落としを減らすための入口です。最後は必ず、自治体の公式ハザードマップで確認できます。</p>
       </div>
-      <div id="errorMessage" class="error-message"></div>
+
+      <div class="search-panel">
+        <div class="panel-heading">
+          <div>
+            <span class="eyebrow">Hazard scan</span>
+            <h2>住所を入力</h2>
+          </div>
+          <img class="panel-logo-img" src="assets/chiba-radar-logo.jpg" alt="千葉レーダーのロゴ">
+        </div>
+        <form id="searchForm" class="search-form">
+          <label class="visually-hidden" for="addressInput">住所</label>
+          <input
+            type="text"
+            id="addressInput"
+            class="search-input"
+            placeholder="例: 浦安市舞浜1 / 銚子市犬吠埼"
+            autocomplete="off"
+          >
+          <button type="submit" class="search-btn" id="searchBtn">分析する</button>
+        </form>
+        <div class="search-meta" aria-label="検索条件">
+          <span>千葉県は自動補完</span>
+          <span>市区町村名から検索できます</span>
+        </div>
+        <div class="search-hint" aria-label="サンプル住所">
+          <span class="hint-label">試してみる</span>
+          <button type="button" class="hint-address">千葉市美浜区中瀬1丁目</button>
+          <button type="button" class="hint-address">浦安市舞浜1</button>
+          <button type="button" class="hint-address">柏市柏1丁目</button>
+          <button type="button" class="hint-address">銚子市犬吠埼</button>
+        </div>
+        <div class="panel-note">入力地点周辺の公式レイヤーを読み取り、リスクの見落としを減らします。</div>
+        <div id="errorMessage" class="error-message"></div>
+      </div>
     </section>
 
     <!-- 結果セクション -->
     <div id="resultsSection" class="results-section">
+      <div class="results-heading">
+        <p class="kicker">Scan result</p>
+        <h2>診断結果</h2>
+        <p id="resultSummary">スコアと地図を見比べながら、現地確認で見るべきポイントを整理できます。</p>
+      </div>
 
       <!-- スコアカード -->
       <section id="scoreCard" class="score-card">
@@ -70,23 +105,31 @@
         <div id="scoreDescription" class="score-description"></div>
       </section>
 
-      <!-- 内訳 -->
-      <section class="breakdown-section">
-        <h3>項目別スコア</h3>
-        <div id="breakdownGrid" class="breakdown-grid"></div>
-      </section>
+      <div class="result-grid">
+        <!-- 内訳 -->
+        <section class="breakdown-section">
+          <div class="section-title">
+            <span>Score detail</span>
+            <h3>項目別スコア</h3>
+          </div>
+          <div id="breakdownGrid" class="breakdown-grid"></div>
+        </section>
 
-      <!-- 地図 -->
-      <section class="map-section">
-        <h3>ハザードマップ表示</h3>
-        <div class="map-controls">
-          <button class="layer-btn" data-layer="flood">🌊 洪水</button>
-          <button class="layer-btn" data-layer="tsunami">🏖️ 津波</button>
-          <button class="layer-btn" data-layer="landslide">⛰️ 土砂災害</button>
-          <button class="layer-btn" data-layer="storm">🌀 高潮</button>
-        </div>
-        <div id="map"></div>
-      </section>
+        <!-- 地図 -->
+        <section class="map-section">
+          <div class="section-title">
+            <span>Map layer</span>
+            <h3>ハザードマップ表示</h3>
+          </div>
+          <div class="map-controls" aria-label="表示レイヤー">
+            <button class="layer-btn" data-layer="flood">洪水</button>
+            <button class="layer-btn" data-layer="tsunami">津波</button>
+            <button class="layer-btn" data-layer="landslide">土砂災害</button>
+            <button class="layer-btn" data-layer="storm">高潮</button>
+          </div>
+          <div id="map"></div>
+        </section>
+      </div>
 
       <!-- 公式リンク -->
       <section class="official-link-section">
@@ -105,12 +148,12 @@
   <!-- ===== フッター ===== -->
   <footer class="app-footer">
     <p>出典: <a href="https://disaportal.gsi.go.jp/" target="_blank">国土交通省 ハザードマップポータルサイト</a> ／ <a href="https://maps.gsi.go.jp/" target="_blank">国土地理院</a></p>
-    <p style="margin-top: 6px;">※ このスコアは公式データを基にした参考値です。正確な情報は各市町村の公式ハザードマップをご確認ください。</p>
+    <p>※ 表示スコアは公式ハザードマップ確認前の参考指標です。正確な判定は各市町村・国の公式ハザードマップをご確認ください。</p>
   </footer>
 
   <!-- ===== Scripts ===== -->
-  <script src="hazard-data.js"></script>
-  <script src="app.js"></script>
+  <script src="hazard-data.js?v=search-ux-2"></script>
+  <script src="app.js?v=search-ux-2"></script>
 
 </body>
 </html>
